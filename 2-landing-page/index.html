@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaskFlow | Landing Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="nav__logo">TaskFlow</a>
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#features" class="nav__link">Features</a></li>
+        <li class="nav__item"><a href="#cta" class="nav__link">Get Started</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle">🌙 Dark</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Banner -->
+    <section class="banner">
+      <div class="banner__content">
+        <h1 class="banner__title">Organize your work, the simple way</h1>
+        <p class="banner__text">
+          TaskFlow helps you plan tasks, track progress and stay focused, all in one place.
+        </p>
+        <a href="#cta" class="button button--primary">Try It Free</a>
+        <a href="#features" class="button button--outline">Learn More</a>
+      </div>
+      <div class="banner__image">📋</div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+      <h2 class="features__heading">Why choose TaskFlow?</h2>
+      <div class="features__grid">
+        <article class="feature-card">
+          <div class="feature-card__icon">⚡</div>
+          <h3 class="feature-card__title">Fast</h3>
+          <p class="feature-card__text">Add and update tasks in seconds with a clean interface.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon">📱</div>
+          <h3 class="feature-card__title">Responsive</h3>
+          <p class="feature-card__text">Works smoothly on mobile, tablet and desktop.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-card__icon">🔒</div>
+          <h3 class="feature-card__title">Secure</h3>
+          <p class="feature-card__text">Your data stays private and protected.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta" id="cta">
+      <h2 class="cta__title">Ready to get started?</h2>
+      <p class="cta__text">Join today and make your work easier.</p>
+      <form class="cta__form">
+        <input type="email" class="cta__input" placeholder="Enter your email" required>
+        <button type="submit" class="button button--primary">Sign Up</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">&copy; 2026 TaskFlow. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById("themeToggle");
+
+    toggle.addEventListener("click", function () {
+      document.body.classList.toggle("dark");
+
+      if (document.body.classList.contains("dark")) {
+        toggle.textContent = "☀️ Light";
+      } else {
+        toggle.textContent = "🌙 Dark";
+      }
+    });
+  </script>
+
+</body>
+</html>
